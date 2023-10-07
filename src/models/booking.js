@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
+
   Booking.init({
     flightID: {
       type:DataTypes.INTEGER,
@@ -27,9 +28,20 @@ module.exports = (sequelize, DataTypes) => {
       allowNull:false,
       defaultValue:'InProcess',
       values:['InProcess','Booked','Canceled']
+    } ,
+    noOfSeats: {
+      type:DataTypes.INTEGER,
+      allowNull:false,
+      defaultValue:1,
+    } ,
+    totalCost: {
+      type:DataTypes.INTEGER,
+      allowNull:false,
+      defaultValue:0,
     }  }, {
     sequelize,
     modelName: 'Booking',
   });
   return Booking;
 };
+
