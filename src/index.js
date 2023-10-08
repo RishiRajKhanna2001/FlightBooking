@@ -2,7 +2,7 @@ const express=require('express');
 const bodyParser=require('body-parser');
 const app=express();
 
-const {PORT,FLIGHT_SERVICE_PATH}=require('./config/server-config');
+const {PORT}=require('./config/server-config');
 const apiRoutes=require('./routes/index');
 const db=require('./models/index')
 
@@ -22,3 +22,4 @@ const setupAndStartServer=()=>{
 }
 
 setupAndStartServer();
+

@@ -1,6 +1,5 @@
 const {BookingService}=require('../services/index')
-
-const {StatusCodes}=require('http-status-code ')
+const {StatusCodes}=require('http-status-codes')
 
 const bookingService=new BookingService(); //object
 
