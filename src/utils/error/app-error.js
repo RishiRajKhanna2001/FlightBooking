@@ -1,18 +1,16 @@
-const {StatusCodes}=require('http-status-code');
-
-class AppError extends Error{
+class AppError extends Error {
     constructor(
-    name,
-    message,
-    explanation,
-    statusCodes
-    ){
-       super();
-       this.name=name;
-       this.message=message;
-       this.explanation=explanation;
-       this.statusCodes=statusCodes
+        name,
+        message,
+        explanation,
+        statusCode
+    ) {
+        super();
+        this.name = name;
+        this.message = message;
+        this.explanation = explanation;
+        this.statusCode = statusCode;
     }
 }
 
-module.exports=AppError
+module.exports = AppError;
